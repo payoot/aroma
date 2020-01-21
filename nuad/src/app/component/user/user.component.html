@@ -1,0 +1,122 @@
+<mat-tab-group style="height: 870px">
+    <mat-tab label="{{tab1}}" style="font-weight: 800; font-size: 20px;">
+        <!-- <div class="row"> -->
+        <div class="box" style="font-size: 20px;">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <h3>ข้อมูลส่วนตัว</h3>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!-- <div class="row">
+
+                                </div> -->
+                                <mat-card class="namecard">
+                                    <h6>โปรไฟล์ผู้ใช้</h6>
+                                    <div class="box-img-user">
+                                        <img src="../../../assets/user.png" class="fig-img" alt="user picture">
+                                    </div>
+                                    <br>
+                                    <button mat-raised-button>UserProfile</button>
+                                </mat-card>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+                                <mat-card class="namecard">
+                                    <h6>ประเภทสมาชิก</h6>
+                                    <div class="box-img-card">
+                                        <img src="../../../assets/platinum.jpg" class="fig-img" alt="card picture">
+                                    </div>
+                                    <br>
+                                    <button mat-raised-button>Platinum Card</button>
+                                </mat-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <mat-card>
+                                    <h6>ข้อมูลติดต่อ</h6>
+                                    <div class="col-lg-12 col-md-12 col-xs-12">
+                                        <form [formGroup]="FormProfile" (ngSubmit)="OnSubmit()">
+                                            <div class="example-container">
+                                                <mat-form-field color='primary'>
+                                                    <mat-label class="disabled" for="Name">ชื่อ - นามสกุล</mat-label>
+                                                    <input formControlName='Name' matInput placeholder="ชื่อ">
+                                                    <button mat-icon-button matSuffix><mat-icon>person</mat-icon>&nbsp;&nbsp;<mat-icon (click)="EditName()">edit</mat-icon></button>
+                                                </mat-form-field>
+                                                <mat-form-field color='primary'>
+                                                    <mat-label>ที่อยู่ 1</mat-label>
+                                                    <input formControlName='Locate1' matInput placeholder="บ้านเลขที่ - หมู่บ้าน">
+                                                    <button mat-icon-button matSuffix><mat-icon>home</mat-icon>&nbsp;&nbsp;<mat-icon (click)="EditCity1()">edit</mat-icon></button>
+                                                </mat-form-field>
+                                                <mat-form-field color='primary'>
+                                                    <mat-label>ที่อยู่ 2</mat-label>
+                                                    <input formControlName='Locate2' matInput placeholder="ตำลล - อำเภอ - จังหวัด">
+                                                    <button mat-icon-button matSuffix><mat-icon>home</mat-icon>&nbsp;&nbsp;<mat-icon (click)="EditCity2()">edit</mat-icon></button>
+                                                </mat-form-field>
+                                                <mat-form-field color='primary'>
+                                                    <mat-label>เบอร์โทร</mat-label>
+                                                    <input formControlName='Tell' matInput placeholder="Tell.">
+                                                    <button mat-icon-button matSuffix><mat-icon>call</mat-icon>&nbsp;&nbsp;<mat-icon (click)="EditTell()">edit</mat-icon></button>
+                                                </mat-form-field>
+                                                <mat-form-field color='primary'>
+                                                    <mat-label>อีเมลล์</mat-label>
+                                                    <input formControlName='Mail' matInput placeholder="E - mail">
+                                                    <button mat-icon-button matSuffix><mat-icon>mail</mat-icon>&nbsp;&nbsp;<mat-icon (click)="EditMail()">edit</mat-icon></button>
+                                                </mat-form-field>
+                                                <mat-form-field color='primary'>
+                                                    <mat-label>Line ID</mat-label>
+                                                    <input formControlName='Line' matInput placeholder="Line ID">
+                                                    <button mat-icon-button matSuffix><img src="../../../assets/images.png" alt="line" style="width: 60%">&nbsp;&nbsp;<mat-icon (click)="EditLine()">edit</mat-icon></button>
+                                                </mat-form-field>
+                                            </div>
+                                            <div class="box-submit">
+                                                <button [disabled]="!FormProfile.valid" mat-raised-button type="submit" color="primary" style="padding: 3px 60px;">บันทึก</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <mat-card>
+                                    <h6>ข้อมูลสุขภาพ</h6>
+                                    <div class="col-lg-12 col-md-12 col-xs-12">
+                                        <form>
+                                            <p>input</p>
+                                            <p>input</p>
+                                            <p>input</p>
+                                        </form>
+                                    </div>
+                                </mat-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- </div> -->
+    </mat-tab>
+    <mat-tab label="{{tab2}}" style="font-size: 18px; font-weight: 700;">
+        <mat-card>Simple card</mat-card>
+    </mat-tab>
+    <mat-tab label="{{tab3}}">
+        <mat-card>Simple card</mat-card>
+    </mat-tab>
+    <mat-tab label="{{tab4}}">
+        <mat-card>Simple card</mat-card>
+    </mat-tab>
+</mat-tab-group>

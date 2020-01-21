@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    /* font-family: 'Kanit', sans-serif; */
+    margin: 0;
+}
+
+body {
+    /* margin: 0; */
+    /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+    font-family: 'Kanit', sans-serif;
+    /* background-color: aquamarine; */
+    /* margin-bottom: 50px; */
+}
+
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+
+/* .fig-font {
+    font-family: 'Kanit', sans-serif;
+} */
+
+.link-point {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+.signin-title {
+    text-align: center;
+}
+
+.mat-tab-label .mat-tab-label-content {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: #333339;
+    font-weight: 700 !important;
+    font-size: 20px;
+}
+
+
+/* Styles for the active tab label */
+
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: #000000;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.mat-tab-list {
+    background-color: #7bfddf;
+}
+
+@media (min-width: 320px) and (max-width:480px) {
+    .link-point {
+        cursor: pointer;
+    }
+    a {
+        cursor: pointer;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width:640px) {
+    .link-point {
+        cursor: pointer;
+    }
+    a {
+        cursor: pointer;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 641px) and (max-width:960px) {
+    .link-point {
+        cursor: pointer;
+    }
+    a {
+        cursor: pointer;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 961px) and (max-width:1024px) {
+    .link-point {
+        cursor: pointer;
+    }
+    a {
+        cursor: pointer;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:1280px) {
+    .link-point {
+        cursor: pointer;
+    }
+    a {
+        cursor: pointer;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1281px) {
+    .link-point {
+        cursor: pointer;
+    }
+    a {
+        cursor: pointer;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}

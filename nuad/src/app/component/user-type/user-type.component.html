@@ -1,0 +1,38 @@
+<div class="boxtype">
+    <br>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <mat-card>
+                <h3>สำหรับผู้ใช้บริการ</h3>
+                <div class="box">
+                    <img class="img-fig" src="../../../assets/user.png" alt="user img">
+                    <button mat-raised-button routerLink="/user" color="accent" (click)="OnSelectUser()">เข้าใช้งาน</button>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+            <mat-card>
+                <h3>สำหรับร้าน</h3>
+                <div class="box">
+                    <img class="img-fig" src="../../../assets/clinic.jpg" alt="clinic img">
+                    <button mat-raised-button routerLink="/clinic" color="primary" (click)="OnSelectClinic()">เข้าใช้งาน</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+
+<!-- <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile class="user">
+        <div class="box">User
+            <img class="img-fig" src="../../../assets/user.png" alt="user_img">
+            <button mat-raised-button>เข้าใช้งาน</button>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="clinic">
+        <div class="box">Clinic
+            <img class="img-fig" src="../../../assets/clinic.jpg" alt="clinic_img">
+        </div>
+    </mat-grid-tile>
+</mat-grid-list> -->

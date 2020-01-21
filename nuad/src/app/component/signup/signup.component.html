@@ -1,0 +1,47 @@
+<div class="signin-box">
+    <h3 class="signin-title">
+        <mat-label>Signup | สมัครสมาชิก</mat-label>
+    </h3>
+    <form [formGroup]="regisForm" (ngSubmit)="OnSubmit()">
+        <div class="example-container">
+            <mat-form-field color='primary'>
+                <input [class.is-invalid]="userName.invalid && userName.touched" formControlName='username' matInput placeholder="Username">
+                <!-- <small [class.d-none]="userName.valid || userName.untouched" class="text-danger">Username is required</small> -->
+                <div *ngIf="userName.invalid && userName.touched">
+                    <small *ngIf="userName.errors?.required" class="text-danger">Username is required</small>
+                    <small *ngIf="userName.errors?.minlength" class="text-danger">Username must be at least 3 characters</small>
+                    <small *ngIf="userName.errors?.forbiddenName" class="text-danger">"{{userName.errors?.forbiddenName.value}}" Username not allowed</small>
+                </div>
+            </mat-form-field>
+            <mat-form-field color='primary'>
+                <mat-label>Email :</mat-label>
+                <input [class.is-invalid]="uMail.invalid && uMail.touched" type="text" formControlName='umail' matInput placeholder="Email">
+                <div *ngIf="uMail.invalid && uMail.touched">
+                    <small *ngIf="uMail.errors?.required" class="text-danger">Email is required</small>
+                    <small *ngIf="uMail.errors?.email" class="text-danger">Email not match pattren</small>
+                </div>
+                <button mat-icon-button matSuffix>
+                <mat-icon>mail</mat-icon>
+            </button>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName='password' matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field>
+                <input [class.is-invalid]="regisForm.errors?.misMatch" formControlName='confirmpassword' matInput placeholder="Re-type password" [type]="hide ? 'password' : 'text'">
+                <small class="text-danger" *ngIf="regisForm.errors?.misMatch">Password do not match</small>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <mat-grid-list cols="1" rowHeight="50px">
+            <mat-grid-tile>
+                <button [disabled]="!regisForm.valid" mat-raised-button type="submit" color="primary" style="width: 100%">Signup</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>

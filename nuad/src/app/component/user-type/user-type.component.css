@@ -1,0 +1,28 @@
+.user {
+    background-color: chocolate;
+}
+
+.clinic {
+    background-color: goldenrod;
+}
+
+.box {
+    margin: auto;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: 0px auto 3rem auto;
+}
+
+.img-fig {
+    width: 90%;
+}
+
+button {
+    margin: 1rem;
+}
+
+.boxtype {
+    margin-right: 15px;
+    margin-left: 15px;
+}

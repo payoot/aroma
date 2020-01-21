@@ -1,0 +1,28 @@
+<div class="signin-box">
+    <h3 class="signin-title">
+        <mat-label>Signin | เข้าสู่ระบบ</mat-label>
+    </h3>
+    <form [formGroup]="FormSignin" (ngSubmit)="OnSubmit()">
+        <div class="example-container">
+            <mat-form-field color='primary'>
+                <mat-label>Username</mat-label>
+                <input formControlName='umail' matInput placeholder="Username or Email">
+                <button mat-icon-button matSuffix>
+                        <mat-icon>mail</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field>
+                <input formControlName='password' matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <mat-grid-list cols="1" rowHeight="50px">
+            <mat-grid-tile>
+                <button [disabled]="!FormSignin.valid" mat-raised-button type="submit" color="primary" style="width: 100%">Signin</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>
+<!-- <p>Signin work!</p> -->

@@ -1,0 +1,95 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-right-align {
+    text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}
+
+input.example-right-align {
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 320px) and (max-width:420px) {
+    .signin-box {
+        width: 100%;
+        /* color: teal; */
+    }
+    .example-container>* {
+        width: 100%;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 421px) and (max-width:640px) {
+    .signin-box {
+        width: 100%;
+        /* color: teal; */
+    }
+    .example-container>* {
+        width: 100%;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 641px) and (max-width:960px) {
+    .signin-box {
+        width: 100%;
+        /* color: teal; */
+    }
+    .example-container>* {
+        width: 100%;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 961px) and (max-width:1024px) {
+    .signin-box {
+        width: 100%;
+        /* color: teal; */
+    }
+    .example-container>* {
+        width: 100%;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:1280px) {
+    .signin-box {
+        width: 300px;
+        /* color: teal; */
+    }
+    .example-container>* {
+        width: 100%;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1281px) {
+    .signin-box {
+        width: 300px;
+        /* color: teal; */
+    }
+    .example-container>* {
+        width: 100%;
+    }
+    .signin-title {
+        text-align: center;
+    }
+}
